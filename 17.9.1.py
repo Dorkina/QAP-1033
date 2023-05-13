@@ -34,6 +34,10 @@ while again:
         again = False
 
 sort_list = sort(array_list)
-findex = binary_search(sort_list, input_number, 0, len(sort_list)-1)
-print(sort_list)
-print(findex)
+if min(sort_list) < input_number <= max(sort_list):
+    findex = binary_search(sort_list, input_number, 0, len(sort_list) - 1)
+    print(findex + 1)
+else:
+    print("Число вне диапозона")
+
+
